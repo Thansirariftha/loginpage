@@ -1,0 +1,48 @@
+<html>
+
+<body>
+  <div class="header">
+    <img width="100" align="left" alt="ipc" src="assets/images/ipc.png">
+    <a routerLink="/explore">EXPLORE</a>
+    <div style="float: right" class="button">
+      <button type="Button">Register</button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="header2">
+    <img width="300" align="left" alt="ipc" src="assets/images/ipc.png">
+    <div class="logoname">
+      <h1>YenepoyaDev</h1>
+      <p>Powered by ipublishcentral health</p>
+    </div>
+  </div>
+
+  <div style="text-align : center">
+    <h4>
+      Let's get Started
+    </h4>
+    <form id="contactForm" [formGroup]="form" (ngSubmit)="submit()" align="center">
+      <h5 *ngIf="success">Your form is valid!</h5>
+
+      <mat-form-field>
+        <input matInput placeholder="Name" class="form-control" formControlName="name" name="name">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <input matInput placeholder="Password" type="password" class="form-control" name="password">
+       
+      </mat-form-field>
+      <br>
+     
+
+      <button id="btnSubmit" mat-raised-button type="submit" color="primary">Submit</button>
+      <br>
+    </form>
+  </div>
+</body>
+
+</html>
+<router-outlet></router-outlet>
